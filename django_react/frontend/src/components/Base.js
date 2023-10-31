@@ -11,7 +11,9 @@ const Base = () => {
   return (
     <Navbar key="false" expand="false" className="bg-body-tertiary mb-3">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+        <Navbar.Brand href="#">
+          <img src="logo.png" />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-$"false"`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-$"false"`}

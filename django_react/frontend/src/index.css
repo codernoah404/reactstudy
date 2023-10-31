@@ -9,3 +9,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+@font-face {
+  font-family: "Sunflower";
+  font-style: normal;
+  font-weight: 100;
+  src: url("fonts/Sunflower-Medium.ttf") format("truetype");
+}
+
+body {
+  font-family: "Sunflower";
+}
