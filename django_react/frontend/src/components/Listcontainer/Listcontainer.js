@@ -1,6 +1,6 @@
 import React from "react";
 import "./container.css";
-import ListItem from "../ListItem/ListItem";
+import ListItem from "../ListItem/ListItem_copy";
 
 const Listcontainer = ({ itemList }) => {
   console.log(itemList);

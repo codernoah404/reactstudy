@@ -1,42 +1,45 @@
-.Item {
-  width: 17%;
-  height: 1%;
-  flex-wrap: wrap;
-  margin: 20px;
-  position: relative;
+.item {
+  list-style: none;
+  padding: 7px;
+  margin: 7px;
+  background-color: whitesmoke;
   border-radius: 4%;
-  overflow: hidden;
-  border: solid 0.5px;
+  width: 50%;
 }
 
-.Thumbnail {
-  width: 100%;
+.thumbnail {
+  width: 180px;
   height: 100%;
-  object-fit: cover;
+  border: solid 0.5px;
+  margin-left: 10px;
+  margin-right: 7px;
 }
 
-/* 나중에 옮겨야 하는 style */
-.Item-container {
-  align-content: flex-start;
+.li-box-text {
+  flex-grow: 1;
+  width: 54%;
+}
+.text {
+  position: relative;
+  top: 12px;
+  left: 7px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.them-title {
+  color: black;
+  text-decoration-line: none;
+  font-size: 34px;
+
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-container {
   display: flex;
-}
-
-.TextBOX {
-  background-color: black;
-  opacity: 0.7;
-  width: 100%;
-  height: 20%;
-  position: absolute;
-  transform: translate(0%, -100%);
-}
-
-.Text {
-  color: white;
-  position: absolute;
-  width: 100%;
-  height: 17%;
-  margin-left: 10%;
-  transform: translate(0%, -100%);
-  align-items: center;
-  font-size: 15pt;
+  padding: none;
+  margin-right: 20px;
 }

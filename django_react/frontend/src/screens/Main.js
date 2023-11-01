@@ -1,6 +1,8 @@
 import React from "react";
-import Base from "../components/Base";
+import Base from "../components/Base/Base";
 import Listcontainer from "../components/Listcontainer/Listcontainer";
+import Category from "../components/category/Category";
+import { Col, Container, Row } from "react-bootstrap";
 
 const dummyList = [
   {
@@ -75,7 +77,16 @@ const Main = () => {
   return (
     <div>
       <Base />
-      <Listcontainer itemList={dummyList} />
+      <Container fluid>
+        <Row>
+          <Col md={4}>
+            <Category />
+          </Col>
+          <Col md={{ span: 8 }}>
+            <Listcontainer itemList={dummyList} />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };

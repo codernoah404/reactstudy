@@ -1,24 +1,32 @@
 import React from "react";
-import "../Listcontainer/Listcontainer";
 
 const ListItem = ({ items }) => {
   console.log(items);
   return (
     <div className="Listcontainer">
-      <h1>테스트</h1>
-      <ul className="Item-container">
+      <ul className="item-container">
         {items.map((item, idx) => (
-          <li className="Item" key={idx}>
-            <a href={`/${item.id}`}>
-              {/* <a href={get_url(item.id)}> */}
-              <img className="Thumbnail" src={item.thumbnail} />
-              <div className="TextBOX" />
-              <p className="Text">
-                {item.title}
-                <br />
-                {item.companyName}
-              </p>
-            </a>
+          <li className="item" key={idx}>
+            <div className="d-flex li-box">
+              <div className="thumbnail-div">
+                <img className="thumbnail" src={item.thumbnail} />
+              </div>
+              <div className="li-box-text ">
+                <p className="text">
+                  <a href={`/${item.id}`} className="them-title">
+                    {/* <strong>{item.title}</strong> */}
+                  </a>
+                  <br />
+                  {item.companyName}
+                  <br />
+                  난이도: {item.level}/5
+                  <br />
+                  시간: {item.time}분
+                  <br />
+                  평점: {item.grade}점
+                </p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

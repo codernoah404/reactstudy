@@ -6,13 +6,15 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import Logo from "./logo.png";
+import "./Base.css";
 
 const Base = () => {
   return (
     <Navbar key="false" expand="false" className="bg-body-tertiary mb-3">
       <Container fluid>
-        <Navbar.Brand href="#">
-          <img src="logo.png" />
+        <Navbar.Brand href="/">
+          <img className="Logo" src={Logo} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-$"false"`} />
         <Navbar.Offcanvas

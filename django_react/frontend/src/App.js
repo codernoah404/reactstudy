@@ -11,8 +11,6 @@ function App() {
       <Routes>
         <Route exact path="/:roomId" element={<RoomDetail />} />
         <Route exact path="/" element={<Main />} />
-
-        {/* <Route exact path="/" element={<Main />} /> */}
       </Routes>
     </Router>
   );
