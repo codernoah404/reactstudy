@@ -24,27 +24,27 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 function IdCell({ id, checked }) {
-  return (
-    <MDBox display="flex" alignItems="center">
-      <Checkbox defaultChecked={checked} />
-      <MDBox ml={1}>
-        <MDTypography variant="caption" fontWeight="medium" color="text">
-          {id}
-        </MDTypography>
-      </MDBox>
-    </MDBox>
-  );
+	return (
+		<MDBox display="flex" alignItems="center">
+			<Checkbox defaultChecked={checked} />
+			<MDBox ml={1}>
+				<MDTypography variant="caption" fontWeight="medium" color="text">
+					{id}
+				</MDTypography>
+			</MDBox>
+		</MDBox>
+	);
 }
 
 // Setting default value for the props of IdCell
 IdCell.defaultProps = {
-  checked: false,
+	checked: false,
 };
 
 // Typechecking props for the IdCell
 IdCell.propTypes = {
-  id: PropTypes.string.isRequired,
-  checked: PropTypes.bool,
+	id: PropTypes.string.isRequired,
+	checked: PropTypes.bool,
 };
 
 export default IdCell;

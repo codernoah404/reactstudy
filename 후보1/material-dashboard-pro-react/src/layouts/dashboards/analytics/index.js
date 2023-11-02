@@ -31,28 +31,30 @@ import BookingCard from "examples/Cards/BookingCard";
 // Data
 
 function Analytics() {
-  return (
-    <DashboardLayout>
-      <DashboardNavbar />
-      <MDBox py={3}>
-        <MDBox mt={2}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
-              <MDBox mt={3}>
-                <BookingCard
-                  image="https://roomescape-backend-image.s3.ap-northeast-2.amazonaws.com/theme/0f24f8e0-fe41-4b87-8bc6-5d661629f28c.jpg"
-                  title="사라진 왕관"
-                  description="시간: 60분 / 난이도: 높음 / 평점: 2.5"
-                  price="$899/night"
-                  location="미스터리룸 이스케이프 강남점"
-                />
-              </MDBox>
-            </Grid>
-          </Grid>
-        </MDBox>
-      </MDBox>
-    </DashboardLayout>
-  );
+	return (
+		<DashboardLayout>
+			<DashboardNavbar />
+			<MDBox py={3}>
+				<MDBox mt={2}>
+					<Grid container spacing={3}>
+						<Grid item xs={12} md={6} lg={4}>
+							<MDBox mt={3}>
+								<BookingCard
+									image="https://roomescape-backend-image.s3.ap-northeast-2.amazonaws.com/theme/0f24f8e0-fe41-4b87-8bc6-5d661629f28c.jpg"
+									title="사라진 왕관"
+									time="시간: 60분"
+									difficulty="난이도: 높음"
+									grade="평점: 2.5"
+									price="$899/night"
+									location="미스터리룸 이스케이프 강남점"
+								/>
+							</MDBox>
+						</Grid>
+					</Grid>
+				</MDBox>
+			</MDBox>
+		</DashboardLayout>
+	);
 }
 
 export default Analytics;

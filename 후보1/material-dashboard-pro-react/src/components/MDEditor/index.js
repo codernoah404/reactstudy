@@ -30,33 +30,33 @@ import MDEditorRoot from "components/MDEditor/MDEditorRoot";
 import { useMaterialUIController } from "context";
 
 function MDEditor({ value }) {
-  const [controller] = useMaterialUIController();
-  const { darkMode } = controller;
+	const [controller] = useMaterialUIController();
+	const { darkMode } = controller;
 
-  const [convertedContent, setConvertedContent] = React.useState(null);
-  const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
+	const [convertedContent, setConvertedContent] = React.useState(null);
+	const [editorState, setEditorState] = React.useState(() => EditorState.createEmpty());
 
-  React.useEffect(() => {
-    let html = convertToHTML(editorState.getCurrentContent());
-    setConvertedContent(html);
-  }, [editorState]);
+	React.useEffect(() => {
+		let html = convertToHTML(editorState.getCurrentContent());
+		setConvertedContent(html);
+	}, [editorState]);
 
-  return (
-    <MDEditorRoot ownerState={{ darkMode }}>
-      {value && typeof value === "function" && value(convertedContent)}
-      <Editor editorState={editorState} onEditorStateChange={setEditorState} />
-    </MDEditorRoot>
-  );
+	return (
+		<MDEditorRoot ownerState={{ darkMode }}>
+			{value && typeof value === "function" && value(convertedContent)}
+			<Editor editorState={editorState} onEditorStateChange={setEditorState} />
+		</MDEditorRoot>
+	);
 }
 
 // Setting default values for the props of MDEditor
 MDEditor.defaultProps = {
-  value: () => {},
+	value: () => {},
 };
 
 // Typechecking props for the MDEditor
 MDEditor.propTypes = {
-  value: PropTypes.func,
+	value: PropTypes.func,
 };
 
 export default MDEditor;

@@ -22,22 +22,22 @@ import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 
 function ProductCell({ image, name }) {
-  return (
-    <MDBox display="flex" alignItems="center" pr={2}>
-      <MDBox mr={2}>
-        <MDAvatar src={image} alt={name} />
-      </MDBox>
-      <MDTypography variant="button" fontWeight="medium">
-        {name}
-      </MDTypography>
-    </MDBox>
-  );
+	return (
+		<MDBox display="flex" alignItems="center" pr={2}>
+			<MDBox mr={2}>
+				<MDAvatar src={image} alt={name} />
+			</MDBox>
+			<MDTypography variant="button" fontWeight="medium">
+				{name}
+			</MDTypography>
+		</MDBox>
+	);
 }
 
 // Typechecking props for the ProductCell
 ProductCell.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+	image: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
 };
 
 export default ProductCell;

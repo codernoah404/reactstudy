@@ -29,32 +29,32 @@ import MDTypography from "components/MDTypography";
 import defaultItemIconBox from "examples/Items/DefaultItem/styles";
 
 const DefaultItem = forwardRef(({ color, icon, title, description, ...rest }, ref) => (
-  <MDBox {...rest} ref={ref} display="flex" alignItems="center">
-    <MDBox sx={(theme) => defaultItemIconBox(theme, { color })}>
-      <Icon>{icon}</Icon>
-    </MDBox>
-    <MDBox ml={2} mt={0.5} lineHeight={1.4}>
-      <MDTypography display="block" variant="button" fontWeight="medium">
-        {title}
-      </MDTypography>
-      <MDTypography variant="button" fontWeight="regular" color="text">
-        {description}
-      </MDTypography>
-    </MDBox>
-  </MDBox>
+	<MDBox {...rest} ref={ref} display="flex" alignItems="center">
+		<MDBox sx={theme => defaultItemIconBox(theme, { color })}>
+			<Icon>{icon}</Icon>
+		</MDBox>
+		<MDBox ml={2} mt={0.5} lineHeight={1.4}>
+			<MDTypography display="block" variant="button" fontWeight="medium">
+				{title}
+			</MDTypography>
+			<MDTypography variant="button" fontWeight="regular" color="text">
+				{description}
+			</MDTypography>
+		</MDBox>
+	</MDBox>
 ));
 
 // Setting default values for the props of DefaultItem
 DefaultItem.defaultProps = {
-  color: "info",
+	color: "info",
 };
 
 // Typechecking props for the DefaultItem
 DefaultItem.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
-  icon: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+	color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+	icon: PropTypes.node.isRequired,
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
 };
 
 export default DefaultItem;
