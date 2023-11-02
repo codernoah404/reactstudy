@@ -12,7 +12,7 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
+import React from "react";
 import { useEffect, useState } from "react";
 
 // react-router-dom components
@@ -223,10 +223,10 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 					</MDTypography>
 				</MDBox>
 				<MDBox component={NavLink} to="/" display="flex" alignItems="center">
-					{brand && <MDBox component="img" src={brand} alt="Brand" width="2rem" />}
+					{brand && <MDBox component="img" src={brand} alt="Brand" width="5rem" sx={{ marginLeft: "27%" }} />}
 					<MDBox width={!brandName && "100%"} sx={theme => sidenavLogoLabel(theme, { miniSidenav })}>
 						<MDTypography component="h6" variant="button" fontWeight="medium" color={textColor}>
-							{brandName}
+							{/* <p style={{ fontsize: "200%" }}>{brandName}</p> */}
 						</MDTypography>
 					</MDBox>
 				</MDBox>

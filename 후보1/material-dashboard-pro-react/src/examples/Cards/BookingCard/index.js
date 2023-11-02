@@ -25,7 +25,7 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-function BookingCard({ image, title, time, difficulty, grade, location }) {
+function BookingCard({ image, title, time, difficulty, grade, location, store_id }) {
 	return (
 		<Card display="flex" className="card" sx={{ width: "130%", position: "relative" }}>
 			<MDBox
@@ -64,11 +64,25 @@ function BookingCard({ image, title, time, difficulty, grade, location }) {
 				/>
 			</MDBox>
 			<MDBox pt={3} px={3} sx={{ width: "70%", position: "absolute", left: "26%" }}>
-				<MDTypography variant="h5" fontWeight="regular" sx={{ mt: 4 }}>
-					<strong>{title}</strong>
+				<MDTypography variant="h5" fontWeight="regular" sx={{ mt: 2 }}>
+					<strong>
+						<a
+							href={store_id}
+							style={{
+								color: "black",
+								fontSize: "180%",
+								display: "block",
+								overflow: "hidden",
+								whiteSpace: "nowrap",
+								textOverflow: "ellipsis",
+							}}
+						>
+							{title}
+						</a>
+					</strong>
 				</MDTypography>
 				<MDTypography variant="body2" color="text" sx={{ mt: 1.5, mb: 1 }}>
-					{difficulty} / {time} / {grade}
+					난이도: {difficulty.toString()} / 시간: {time.toString()}분 / 평점: {grade}/5
 				</MDTypography>
 			</MDBox>
 			<Divider />
@@ -90,8 +104,9 @@ function BookingCard({ image, title, time, difficulty, grade, location }) {
 BookingCard.propTypes = {
 	image: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
-	price: PropTypes.string.isRequired,
+	difficulty: PropTypes.number.isRequired,
+	grade: PropTypes.number.isRequired,
+	store_id: PropTypes.number.isRequired,
 	location: PropTypes.node.isRequired,
 };
 

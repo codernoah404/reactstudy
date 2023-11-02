@@ -47,6 +47,7 @@ import defaultLineChartData from "layouts/dashboards/sales/data/defaultLineChart
 import horizontalBarChartData from "layouts/dashboards/sales/data/horizontalBarChartData";
 import salesTableData from "layouts/dashboards/sales/data/salesTableData";
 import dataTableData from "layouts/dashboards/sales/data/dataTableData";
+import React from "react";
 
 function Sales() {
 	// DefaultStatisticsCard state for the dropdown value
