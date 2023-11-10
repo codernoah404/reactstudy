@@ -1,18 +1,14 @@
-import React from "react";
 import "./App.css";
+import RestAPI from "./RestAPI.js";
+import React from "react";
 
-// import { useRef, useCallback } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Main from "./screens/Main";
-import RoomDetail from "./screens/RoomDetail";
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/:roomId" element={<RoomDetail />} />
-        <Route exact path="/" element={<Main />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <RestAPI />
+      </header>
+    </div>
   );
 }
 
